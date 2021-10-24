@@ -1,21 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar"
+import React, { useState } from "react"
+import { StyleSheet, Button, View } from "react-native"
+import WebView from "react-native-webview"
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    let [url, setURL] = useState("https://expo.dev")
+
+    return (
+        <View style={styles.container}>
+            <View>
+                <Button title="<" onPress={() => alert("back")}></Button>
+                <Button title=">" onPress={() => alert("forward")}></Button>
+            </View>
+            <WebView source={{ uri: url }} style={styles.web} />
+        </View>
+    )
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    container: {
+        flex: 1,
+    },
+    buttons: {
+        width: 20,
+    },
+    web: {},
+})

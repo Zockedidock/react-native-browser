@@ -1,8 +1,8 @@
 import React from "react"
 import {
     StyleSheet,
-    TouchableOpacity as Button,
-    View as Div,
+    TouchableOpacity,
+    View,
     TextInput,
     Text,
 } from "react-native"
@@ -12,21 +12,27 @@ const { windowWidth, navWidth } = std
 const Nav = (props: NavProps) => {
     const { setURL, toggleDropup } = props
     return (
-        <Div style={styles.nav}>
-            <Button style={styles.button} onPress={() => alert("back")}>
+        <View style={styles.nav}>
+            <TouchableOpacity
+                style={styles.button}
+                onPress={() => alert("back")}
+            >
                 <Text> B </Text>
-            </Button>
-            <Button
+            </TouchableOpacity>
+            <TouchableOpacity
                 style={styles.button}
                 onPress={() => setURL("https://google.com")}
             >
                 <Text>F</Text>
-            </Button>
+            </TouchableOpacity>
             <TextInput style={styles.textField} defaultValue=""></TextInput>
-            <Button style={styles.button} onPress={() => toggleDropup()}>
+            <TouchableOpacity
+                style={styles.button}
+                onPress={() => toggleDropup()}
+            >
                 <Text>S</Text>
-            </Button>
-        </Div>
+            </TouchableOpacity>
+        </View>
     )
 }
 

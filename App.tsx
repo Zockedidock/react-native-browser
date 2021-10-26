@@ -1,21 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from "react"
+import { StyleSheet, View } from "react-native"
+import WebView from "react-native-webview"
+import Dropup from "./components/dropup"
+import Nav from "./components/nav"
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+const App = () => {
+    const [url, setURL] = useState("https://expo.dev")
+    const [dropup, setDropup] = useState(false)
+
+    const toggleDropup = () => setDropup(!dropup)
+
+    return (
+        <View style={styles.container}>
+            <WebView source={{ uri: url }} />
+            {dropup ? <Dropup /> : null}
+            <Nav setURL={setURL} toggleDropup={toggleDropup} />
+        </View>
+    )
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    container: {
+        marginTop: 40,
+        flex: 1,
+    },
+})
+
+export default App

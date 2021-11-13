@@ -6,14 +6,15 @@ import Nav from "./components/nav"
 
 const App = () => {
     const [url, setURL] = useState("https://expo.dev")
-    const [dropup, setDropup] = useState(false)
+    const [dropup, setDropup] = useState(null)
 
-    const toggleDropup = () => setDropup(!dropup)
+    // @ts-expect-error: this is intentional
+    const toggleDropup = () => setDropup(dropup ? null : true)
 
     return (
         <View style={styles.container}>
             <WebView source={{ uri: url }} />
-            {dropup ? <Dropup /> : null}
+            {dropup ?? <Dropup />}
             <Nav setURL={setURL} toggleDropup={toggleDropup} />
         </View>
     )

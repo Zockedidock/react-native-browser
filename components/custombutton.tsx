@@ -1,8 +1,8 @@
 import React from "react"
-import { TouchableOpacity, Text, StyleSheet } from "react-native"
+import { TouchableOpacity, Text } from "react-native"
 import { NavButtonProps } from "../std"
 
-const NavButton = (props: NavButtonProps) => {
+const CustomButton = (props: NavButtonProps) => {
     const { onPress, text, style } = props
     return (
         <TouchableOpacity style={style} onPress={onPress}>
@@ -11,4 +11,4 @@ const NavButton = (props: NavButtonProps) => {
     )
 }
 
-export default NavButton
+export default CustomButton

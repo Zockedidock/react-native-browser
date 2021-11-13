@@ -5,6 +5,8 @@ const std = {
     windowWidth: Dimensions.get("window").width,
     windowHeight: Dimensions.get("window").height,
     navWidth: 337,
+    dropupWidth: 120,
+    dropupHeight: 200,
 }
 
 export interface NavProps {

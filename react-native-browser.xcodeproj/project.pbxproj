@@ -1,0 +1,80 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXFileReference section */
+		B7004508273C6FBE00C225D4 /* App.tsx */ = {isa = PBXFileReference; explicitFileType = sourcecode.javascript; path = App.tsx; sourceTree = "<group>"; };
+		B700450B273C700C00C225D4 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
+		B700450C273C701400C225D4 /* components */ = {isa = PBXFileReference; lastKnownFileType = folder; path = components; sourceTree = "<group>"; };
+		B7004511273C710E00C225D4 /* std.tsx */ = {isa = PBXFileReference; explicitFileType = sourcecode.javascript; path = std.tsx; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		B70044FD273C6D5900C225D4 = {
+			isa = PBXGroup;
+			children = (
+				B7004511273C710E00C225D4 /* std.tsx */,
+				B700450C273C701400C225D4 /* components */,
+				B700450B273C700C00C225D4 /* assets */,
+				B7004508273C6FBE00C225D4 /* App.tsx */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		B70044FE273C6D5900C225D4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1300;
+			};
+			buildConfigurationList = B7004501273C6D5900C225D4 /* Build configuration list for PBXProject "react-native-browser" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B70044FD273C6D5900C225D4;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		B7004502273C6D5900C225D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		B7004503273C6D5900C225D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B7004501273C6D5900C225D4 /* Build configuration list for PBXProject "react-native-browser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7004502273C6D5900C225D4 /* Debug */,
+				B7004503273C6D5900C225D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B70044FE273C6D5900C225D4 /* Project object */;
+}

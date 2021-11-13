@@ -1,12 +1,16 @@
 import React from "react"
 import { StyleSheet, View, TextInput } from "react-native"
-import NavButton from "./navbutton"
+import CustomButton from "./custombutton"
 import std, { NavProps } from "../std"
 
+const NavButton = CustomButton
 const { windowWidth, navWidth } = std
 
 const Nav = (props: NavProps) => {
     const { setURL, toggleDropup } = props
+    const submitUrl = () => {
+        setURL("https://google.com")
+    }
     return (
         <View style={styles.nav}>
             <NavButton
@@ -19,7 +23,7 @@ const Nav = (props: NavProps) => {
                 style={styles.button}
                 onPress={() => setURL("https://google.com")}
             />
-            <TextInput style={styles.textField} />
+            <TextInput style={styles.textField} onSubmitEditing={submitUrl} />
             <NavButton
                 text="S"
                 style={styles.button}

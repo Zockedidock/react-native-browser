@@ -14,7 +14,7 @@ const Nav = (props: NavProps) => {
     return (
         <View style={styles.nav}>
             <NavButton
-                text="B"
+                icon="twitter"
                 style={styles.button}
                 onPress={() => alert("back")}
             />
@@ -54,20 +54,16 @@ const styles = StyleSheet.create({
         elevation: 8,
     },
     textField: {
+        borderStyle: "solid",
+        borderColor: "gray",
         width: 200,
         maxWidth: 200,
         marginLeft: 8,
         marginRight: 8,
         height: 30,
         paddingLeft: 10,
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 1,
-        },
-        shadowOpacity: 0.18,
-        shadowRadius: 1.0,
-        elevation: 1,
+        borderWidth: 1,
+        borderRadius: 5,
     },
     button: {
         alignItems: "center",
